@@ -1,6 +1,170 @@
-/* Transaction box */
+/* --------------- main --------------- */
+:root {
+--color-nav-blue: #2d4472;
+--color-dark-gray: #697f8c;
+--color-light-gray: #99b1bf;
+--color-green: #28b488;
+--color-black: #2a3840;
+}
+
+@font-face {
+    font-family: 'Iran-Sans';
+    src: url('../../Assets/Fonts/IRANSansWeb\(FaNum\).eot'); 
+    src: url('../../Assets/Fonts/IRANSansWeb\(FaNum\).woff2') format('woff2'), 
+         url('../../Assets/Fonts/IRANSansWeb\(FaNum\).woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Iran-Sans';
+    direction: rtl;
+}
+
+.transactions {
+    margin-top: 60px;
+}
+
+.meta-title {
+    padding-right: 20px;
+    margin: 70px 0 10px 0;
+    color: var(--color-dark-gray);
+}
+
+/* --------------- Navigation --------------- */
+.navigation-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    background-color: var(--color-nav-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.navigation-back {
+    width: 25%;    
+}
+
+.navigation-page-title {
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+}
+
+.navigation-controls {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-controls img, .navigation-back img {
+    width: 20px;
+    height: 20px;
+}
+
+/* --------------- Transaction box --------------- */
+.transaction-box::after {
+    content: "";
+    display: block;
+    background: #dfdfdf;
+    margin: 5px0;
+    height: 1px;
+}
+
+.transaction-right-side, .transaction-left-side {
+    display: flex;
+}
+
 .detail-box {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 30px 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-type img, .transaction-arrow img {
+    width: 18px;
+    height: 18px;
+}
+
+.transaction-type, .transaction-amount {
+    margin-left: 20px;
+}
+
+.transaction-type, .transaction-arrow {
+    align-items: center;
+    display: flex;
+}
+
+.transaction-meta .type {
+    color: var(--color-black);
+}
+
+.transaction-meta .date {
+    color: var(--color-light-gray);
+}
+
+.transaction-amount {
+    color: var(--color-dark-gray);
+}
+
+.increase-amount {
+    color: var(--color-green);
+}
+
+/* --------------- spinner --------------- */
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #b4b4b4 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+      
+    
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
