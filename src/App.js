@@ -1,9 +1,10 @@
+import Transactions from "./Pages/Transactions/Transactions";
 
 function App() {
   return (
-    <div className="App">
-      Hello world!
-    </div>
+    <>
+      <Transactions />
+    </>
   );
 }
 
