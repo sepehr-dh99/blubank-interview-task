@@ -11,7 +11,7 @@ export default function TransactionBox(props) {
 
   return (
     <>
-      <div className="detail-box">
+      <div className="detail-box" onClick={props.click}>
         <div className="transaction-right-side">
           <div className="transaction-type">
             <img src={props.data.isWithdrawal ? Decrease : Increase} />
