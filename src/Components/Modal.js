@@ -1,5 +1,4 @@
 import React from "react";
-import BackDrop from "./BackDrop";
 
 export default function Modal(props) {
   // seprate numbers with comma
@@ -8,13 +7,7 @@ export default function Modal(props) {
   };
   return (
     <>
-      <div
-        className="modal"
-        style={{
-          transform: props.show ? "translateY(0)" : "translateY(100vh)",
-          opacity: props.show ? "1" : "0",
-        }}
-      >
+      <div className="modal">
         <div className="modal-header">
           <h4 className="amount">{numberWithCommas(props.data.amount)} ریال</h4>
           <p className="title">مبلغ</p>

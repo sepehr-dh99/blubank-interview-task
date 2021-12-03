@@ -187,8 +187,7 @@ body {
     z-index: 500;
     text-align: center;
     width: 80%;
-    transition: all 0.5s ease-out;
-    height: 40vh;
+    height: 240px; 
     border-radius: 10px;
     padding: 20px 15px;
     flex-direction: column;
@@ -229,3 +228,20 @@ body {
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* --------------- Transitions --------------- */
+.alert-enter {
+    top: 150%;
+  }
+  .alert-enter-active {
+    transform: translateY(-150vh);
+    transition: all 0.5s ease-out;
+  }
+  .alert-exit {
+    top: 30%;
+  }
+  .alert-exit-active {
+    transform: translateY(150vh);
+    transition: all 0.5s ease-out;
+  }
+  

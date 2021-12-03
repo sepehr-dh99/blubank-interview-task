@@ -8,14 +8,14 @@ export default function Navigation() {
     <>
       <div className="navigation-bar">
         <div className="navigation-back">
-          <img src={Arrow} />
+          <img src={Arrow} alt="arrow" />
         </div>
         <div className="navigation-page-title">
           <h3>صورتحساب</h3>
         </div>
         <div className="navigation-controls">
-          <img src={Magnifier} />
-          <img src={Dots} />
+          <img src={Magnifier} alt="search" />
+          <img src={Dots} alt="more" />
         </div>
       </div>
     </>
