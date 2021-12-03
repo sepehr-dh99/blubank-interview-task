@@ -20,8 +20,9 @@ function App() {
   let location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/modal") setShowMessage(true);
-    if (location.pathname !== "/modal") setShowMessage(false);
+    location.pathname === "/modal"
+      ? setShowMessage(true)
+      : setShowMessage(false);
   }, [location.pathname]);
 
   return (

@@ -76,16 +76,16 @@ body {
     transition: all 0.5s ease-out;
 }
 
+.transaction-box:active {
+    background-color: #ccc;
+}
+
 .transaction-box::after {
     content: "";
     display: block;
     background: #dfdfdf;
     margin: 5px0;
     height: 1px;
-}
-
-.transaction-box:active {
-    background-color: #ccc;
 }
 
 .transaction-right-side, .transaction-left-side {
@@ -97,6 +97,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
 
 .transaction-type img, .transaction-arrow img {
     width: 18px;
@@ -114,14 +115,17 @@ body {
 
 .transaction-meta .type {
     color: var(--color-black);
+    font-size: 13px;
 }
 
 .transaction-meta .date {
     color: var(--color-light-gray);
+    font-size: 15px;
 }
 
 .transaction-amount {
     color: var(--color-dark-gray);
+    font-size: 15px;
 }
 
 .increase-amount {
@@ -234,7 +238,7 @@ body {
     top: 150%;
   }
   .alert-enter-active {
-    transform: translateY(-150vh);
+    transform: translateY(-140vh);
     transition: all 0.5s ease-out;
   }
   .alert-exit {

@@ -39,13 +39,13 @@ export default function Transactions(props) {
             return (
               <div
                 className="transaction-box"
-                ref={lastTransaction}
-                key={transaction.id}
                 onClick={() => {
                   props.setData(transaction);
                 }}
+                ref={lastTransaction}
               >
                 <TransactionBox
+                  key={transaction.id}
                   click={() => {
                     navigate(`/modal`);
                   }}
@@ -57,12 +57,12 @@ export default function Transactions(props) {
             return (
               <div
                 className="transaction-box"
-                key={transaction.id + " " + Math.random()}
                 onClick={() => {
                   props.setData(transaction);
                 }}
               >
                 <TransactionBox
+                  key={transaction.id + " " + Math.random()}
                   click={() => {
                     navigate(`/modal`);
                   }}

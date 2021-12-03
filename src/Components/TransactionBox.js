@@ -2,6 +2,7 @@ import React from "react";
 import Increase from "../Assets/Images/top-left.png";
 import Decrease from "../Assets/Images/bottom-right.png";
 import Left from "../Assets/Images/left-arrow.png";
+import ToSolar from "./ToSolar";
 
 export default function TransactionBox(props) {
   // seprate numbers with comma
@@ -23,7 +24,7 @@ export default function TransactionBox(props) {
             <p className="type">
               {props.data.isWithdrawal ? "برداشت" : "واریز"}
             </p>
-            <p className="date">{props.data.date.split(",")[0]}</p>
+            <p className="date">{ToSolar(props.data.date)}</p>
           </div>
         </div>
         <div className="transaction-left-side">

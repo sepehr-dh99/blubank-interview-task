@@ -1,4 +1,5 @@
 import React from "react";
+import ToSolar from "./ToSolar";
 
 export default function Modal(props) {
   // seprate numbers with comma
@@ -15,7 +16,7 @@ export default function Modal(props) {
         <div className="modal-meta">
           <div className="detail-bar">
             <p>زمان</p>
-            <p>{props.data.date}</p>
+            <p>{ToSolar(props.data.date)}</p>
           </div>
           <div className="detail-bar">
             <p>شماره پیگیری</p>
